@@ -25,13 +25,13 @@ class Portfolio(object):
     
     @abstractmethod
     def generate_positions(self):
-        "This will give the logic for determining how portfolio positions are allocatied on the basis of forecasting signals and available capital."
+        """This will give the logic for determining how portfolio positions are allocatied on the basis of forecasting signals and available capital."""
         
         raise NotImplementedError("Should implement generate_positions()!")
         
     @abstractmethod
     def backtest_portfolio(self):
-        "Give logic for creating trade orders and following equity growth curve as a sum of holdings and capital, and the bar-period returns from the 'positions' dataframe.
+        """Give logic for creating trade orders and following equity growth curve as a sum of holdings and capital, and the bar-period returns from the 'positions' dataframe."""
         
         raise NotImplementedError("Should implement backtest_portfolio()!")
         
