@@ -34,3 +34,4 @@ class Portfolio(object):
         "Give logic for creating trade orders and following equity growth curve as a sum of holdings and capital, and the bar-period returns from the 'positions' dataframe.
         
         raise NotImplementedError("Should implement backtest_portfolio()!")
+        
