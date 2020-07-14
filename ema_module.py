@@ -17,6 +17,18 @@ warnings.filterwarnings('ignore')
 
 def grab_portfolio_data(tickers, start, end):
     
+    """This function will utilize the yahoo finance (yfinance) API to gather historical equity data for your portfolio. Pass an equity ticker, or a list of them, as well as your beginning and end dates to create a resulting pandas dataframe with respective closing prices of each asset.
+    
+    Parameters
+    ----------
+    - tickers: str; Either a singular or list of equity ticker symbols to gather
+          ex: Singular Equity TESLA -> "TSLA"
+          ex: Multiple Equities TESLA, APPLE, FORD -> ["TSLA", "AAPL", "F"]
+          
+    - start: str; The first date that you want to grab data from (Format: "YYYY-MM-DD").
+          ex: "2015-01-01"
+    """
+    
     yf.pdr_override()
     date_format = mdates.DateFormatter('%m/%y')
     df = pdr.get_data_yahoo(tickers, start = start, end = end, interval = '1d')
