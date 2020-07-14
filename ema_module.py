@@ -27,6 +27,9 @@ def grab_portfolio_data(tickers, start, end):
           
     - start: str; The first date that you want to grab data from (Format: "YYYY-MM-DD").
           ex: "2015-01-01"
+          
+    - end: str; The last date that you want to grab data from (Format: "YYYY-MM-DD").
+          ex: "2020-03-21"
     """
     
     yf.pdr_override()
